@@ -1,6 +1,6 @@
 {
   "name": "text-emphasis",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Provide fake CSS text-emphasis with HTML ruby.",
   "main": "lib/index.js",
   "scripts": {
