@@ -1,0 +1,47 @@
+{
+  "name": "text-emphasis",
+  "version": "0.0.1",
+  "description": "Provide fake CSS text-emphasis with HTML ruby.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run build:browser && npm run build:node",
+    "build:browser": "webpack --mode='production'",
+    "build:node": "babel 'src/index.js' --out-dir 'lib' --plugins '@babel/plugin-transform-modules-commonjs'",
+    "start": "webpack-dev-server",
+    "test": "jest"
+  },
+  "author": "matori<pnr.matori@gmail.com>",
+  "homepage": "https://github.com/matori/text-emphasis.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matori/text-emphasis.js"
+  },
+  "bugs": {
+    "url": "https://github.com/matori/text-emphasis.js/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.6.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "grapheme-splitter": "^1.0.4",
+    "jest": "^24.9.0",
+    "license-info-webpack-plugin": "^2.1.1",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "keywords": [
+    "css",
+    "text-emphasis"
+  ],
+  "browserslist": [
+    "> 0.5% and last 2 versions, ie 11"
+  ]
+}

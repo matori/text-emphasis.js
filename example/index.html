@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>text-emphasis.js display check</title>
+  <style>
+    em {
+      font-style: normal;
+    }
+
+    .emoji {
+      font-family: "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    }
+  </style>
+</head>
+<body>
+<h1>display check</h1>
+
+<dl>
+  <dt>basic</dt>
+  <dd>
+    <p>
+      こうやって<em class="emphasis">圏点を打つ</em>。
+    </p>
+  </dd>
+  <dt>include whitespaces</dt>
+  <dd>
+    <p>
+      <code>&lt;em class=&quot;emphasis&quot;>圏[tab]点[space*4]を[fullwidth-space]打つ&lt;/em></code><br>
+      こうやって<em class="emphasis">圏	点    を　打つ</em>。
+    </p>
+  </dd>
+  <dt>nested</dt>
+  <dd>
+    <p>
+      こうやって<em class="emphasis"><a href="https://ja.wikipedia.org/wiki/%E5%9C%8F%E7%82%B9">圏点</a>を打つ</em>。
+    </p>
+  </dd>
+  <dt>deep nested</dt>
+  <dd>
+    <p>
+      こうやって<em class="emphasis"><b><a href="https://ja.wikipedia.org/wiki/%E5%9C%8F%E7%82%B9"><i>圏点</i></a>を</b>打つ</em>。
+    </p>
+  </dd>
+  <dt>nested target</dt>
+  <dd>
+    <p>
+      こうやって<em class="emphasis"><em class="emphasis">圏点</em>を打つ</em>。
+    </p>
+  </dd>
+  <dt>with ruby</dt>
+  <dd>
+    <p>
+      こうやって<em class="emphasis"><ruby>圏点<rt>けんてん</rt></ruby>を打つ</em>。
+    </p>
+  </dd>
+  <dt>open sesame, color tomato</dt>
+  <dd>
+    <p>
+      こうやって<em class="emphasis-2">圏点を打つ</em>。
+    </p>
+  </dd>
+  <dt>custom emphasis symbol</dt>
+  <dd>
+    <p>
+      こうやって<em class="emphasis-3">圏点を打つ</em>。
+    </p>
+  </dd>
+  <dt>‍Zero Width Joiner (ZWJ) Emoji - does not work nicely <span class="emoji">😢</span></dt>
+  <dd>
+    <p>
+      <code>&lt;em class=&quot;emphasis-4&quot;><span class="emoji">👧🏽</span>&lt;/em>（女の子）</code><br>
+      <em class="emoji emphasis-4">👧🏽</em>（女の子）
+    </p>
+    <p>
+      <code>&lt;em class=&quot;emphasis-4&quot;><span class="emoji">👨‍👩‍👧‍👦</span>&lt;/em>（家族）</code><br>
+      <em class="emoji emphasis-4">👨‍👩‍👧‍👦</em>（家族）
+    </p>
+  </dd>
+  <dt>‍Zero Width Joiner (ZWJ) Emoji - with grapheme-splitter - work <span class="emoji">😃</span></dt>
+  <dd>
+    <p>
+      <code>&lt;em class=&quot;emphasis-5&quot;><span class="emoji">👧🏽</span>&lt;/em>（女の子）</code><br>
+      <em class="emoji emphasis-5">👧🏽</em>（女の子）
+    </p>
+    <p>
+      <code>&lt;em class=&quot;emphasis-5&quot;><span class="emoji">👨‍👩‍👧‍👦</span>&lt;/em>（家族）</code><br>
+      <em class="emoji emphasis-5">👨‍👩‍👧‍👦</em>（家族）
+    </p>
+  </dd>
+</dl>
+
+<script src="text-emphasis.js"></script>
+<script src="grapheme-splitter/index.js"></script>
+<script>
+  const splitter = new GraphemeSplitter()
+
+  new TextEmphasis.default({
+    selector: '.emphasis',
+    force: true,
+  })
+
+  new TextEmphasis.default({
+    selector: '.emphasis-2',
+    emphasisSymbol: 'sesame',
+    symbolStyle: 'open',
+    color: 'tomato',
+    force: true,
+  })
+
+  new TextEmphasis.default({
+    selector: '.emphasis-3',
+    string: '🔸',
+    force: true,
+  })
+
+  new TextEmphasis.default({
+    selector: '.emphasis-4',
+    force: true,
+  })
+
+  new TextEmphasis.default({
+    selector: '.emphasis-5',
+    splitter: splitter.splitGraphemes.bind(splitter),
+    force: true,
+  })
+</script>
+</body>
+</html>
