@@ -12,6 +12,16 @@
   - そのような場合、別の文字列分割ライブラリを読み込んで `splitter` オプションに指定する必要があります。
 - このライブラリは空白文字（正規表現 `\s` にマッチする文字）に対しては圏点を提供しません。
 
+## インストール
+
+npmから。
+
+```
+npm install --save text-emphasis
+```
+
+または、このリポジトリをダウンロードしてください。
+
 ## 使い方
 
 ```html
@@ -33,7 +43,7 @@ type: String
 
 #### `emphasisSymbol`
 
-type: String
+type: String  
 default: `"dot"`
 
 圏点のタイプを指定します。指定可能な文字列は以下のリストから選択できます。
@@ -46,7 +56,7 @@ default: `"dot"`
 
 #### `symbolStyle`
 
-type: String
+type: String  
 default: `"filled"`
 
 圏点のスタイルを指定します。指定可能な文字列は以下のリストから選択できます。
@@ -56,21 +66,21 @@ default: `"filled"`
 
 #### `string`
 
-type: String
+type: String  
 default: `""`
 
 何らかの文字を圏点として用いたい場合に文字を指定します。このオプションが指定された場合、 `emphasisSymbol` と `symbolStyle` のオプションは無視されます。
 
 #### `color`
 
-type: String
+type: String  
 default: `""`
 
 圏点の色をCSSで指定可能な値で指定します。このオプションが指定されていない場合、圏点は文脈に応じた色になります。
 
 #### `force`
 
-type: Boolean
+type: Boolean  
 default: `false`
 
 `true` にすることは**おすすめしません**。
@@ -82,7 +92,7 @@ CSS `text-emphasis` をサポートしているブラウザであっても、`ru
 
 #### `splitter`
 
-type: Function
+type: Function  
 default: `undefined`
 
 文字列分割用の関数を指定します。  
@@ -106,7 +116,7 @@ default: `undefined`
 
 #### `hideEmphasisSelection`
 
-type: Boolean
+type: Boolean  
 default: `false`
 
 `true` が指定された場合、ユーザーがテキストを選択し始めたときにすべての疑似圏点を非表示にします。
@@ -116,14 +126,14 @@ default: `false`
 
 #### `rubyClassName`
 
-type: String
+type: String  
 default: `"js-textEmphasis-ruby"`
 
 ライブラリが生成する `ruby` 要素に付与されるクラス名です。
 
 #### `rtClassName`
 
-type: String
+type: String  
 default: `"js-textEmphasis-rt"`
 
 ライブラリが生成する `rt` 要素に付与されるクラス名です。

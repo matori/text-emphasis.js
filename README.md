@@ -12,6 +12,16 @@ This library provides fake emphasis marks to browsers which does not support CSS
   - In this case, load another text split library and specify it to `splitter` option.
 - This library does not add fake emphasis to whitespaces ( `/\s/` ).
 
+## Install
+
+via npm.
+
+```
+npm install --save text-emphasis
+```
+
+or download this repository.
+
 ## Usage
 
 ```html
@@ -33,7 +43,7 @@ Target selector.
 
 #### `emphasisSymbol`
 
-type: String
+type: String  
 default: `"dot"`
 
 Specifying emphasis mark. Choose from the following list.
@@ -46,7 +56,7 @@ Specifying emphasis mark. Choose from the following list.
 
 #### `symbolStyle`
 
-type: String
+type: String  
 default: `"filled"`
 
 Specifying emphasis marks the style. Choose from the following list.
@@ -56,36 +66,36 @@ Specifying emphasis marks the style. Choose from the following list.
 
 #### `string`
 
-type: String
+type: String  
 default: `""`
 
 Specifying any character for emphasis marks it if you want. If this option is specified, `emphasisSymbol` and `symbolStyle` options will be ignored.
 
 #### `color`
 
-type: String
+type: String  
 default: `""`
 
 Specifying emphasis marks color. If this option is not specified, emphasis marks will be contextual color.
 
 #### `force`
 
-type: Boolean
+type: Boolean  
 default: `false`
 
 **Not Recommend** to set `true`.
 
 Force fake emphasis marks provided from this library to browsers which supports CSS `text-emphasis`, if that supports `ruby` element.
 
-This option is prepared for development.
+This option is prepared for development.  
 Recommend using native CSS `text-emphasis` (or `-webkit-text-emphasis` ) for modern browsers in production, and this library is used for Internet Explorer 11 and old Microsoft Edge (EdgeHTML version).
 
 #### `splitter`
 
-type: Function
+type: Function  
 default: `undefined`
 
-Specifying text splitter function.
+Specifying text splitter function.  
 If not specified, this library use native `Array.from` (or [core-js](https://github.com/zloirock/core-js) `Array.from` polyfill).
 
 If you want to add emphasis marks to a character using ZWJ (Zero Width Joiner) like `👨‍👩‍👧‍👦` correctly, you need other library for this option,
@@ -106,7 +116,7 @@ If you want to add emphasis marks to a character using ZWJ (Zero Width Joiner) l
 
 #### `hideEmphasisSelection`
 
-type: Boolean
+type: Boolean  
 default: `false`
 
 If set `true`, when a user start selection, all emphasis marks provided from this library will be invisible.
@@ -117,14 +127,14 @@ Because, CSS `-ms-user-select: none` (IE supports this) is different from `user-
 
 #### `rubyClassName`
 
-type: String
+type: String  
 default: `"js-textEmphasis-ruby"`
 
 HTML `class` attribute value of generated `ruby` elements for fake emphasis.
 
 #### `rtClassName`
 
-type: String
+type: String  
 default: `"js-textEmphasis-rt"`
 
 HTML `class` attribute value of generated `rt` elements for fake emphasis.
