@@ -17,11 +17,11 @@ describe("basics", () => {
 <p>こうやって
   <em>
     <ruby class="js-textEmphasis-ruby" aria-label="圏点を打つ">
-      圏<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      点<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      を<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      打<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      つ<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">圏</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">点</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">を</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">打</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">つ</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
     </ruby>
   </em>。
 </p>
@@ -39,20 +39,20 @@ describe("basics", () => {
       '<p>こうやって' +
       '<em>' +
       '<ruby class="js-textEmphasis-ruby" aria-label="圏">' +
-      '圏<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
+      '<rb aria-hidden="true">圏</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
       '</ruby>' +
       '\t' +
       '<ruby class="js-textEmphasis-ruby" aria-label="点">' +
-      '点<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
+      '<rb aria-hidden="true">点</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
       '</ruby>' +
       '    ' +
       '<ruby class="js-textEmphasis-ruby" aria-label="を">' +
-      'を<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
+      '<rb aria-hidden="true">を</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
       '</ruby>' +
       '　' +
       '<ruby class="js-textEmphasis-ruby" aria-label="打つ">' +
-      '打<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
-      'つ<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
+      '<rb aria-hidden="true">打</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
+      '<rb aria-hidden="true">つ</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>' +
       '</ruby>' +
       '</em>。' +
       '</p>'
@@ -75,14 +75,14 @@ describe("basics", () => {
   <em>
     <span>
       <ruby class="js-textEmphasis-ruby" aria-label="圏点">
-        圏<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-        点<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+        <rb aria-hidden="true">圏</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+        <rb aria-hidden="true">点</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
       </ruby>
     </span>
     <ruby class="js-textEmphasis-ruby" aria-label="を打つ">
-      を<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      打<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      つ<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">を</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">打</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">つ</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
     </ruby>
   </em>。
 </p>
@@ -108,18 +108,18 @@ describe("basics", () => {
       <a href="">
         <i>
           <ruby class="js-textEmphasis-ruby" aria-label="圏">
-            圏<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+            <rb aria-hidden="true">圏</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
           </ruby>
         </i>
         <ruby class="js-textEmphasis-ruby" aria-label="点">
-          点<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+          <rb aria-hidden="true">点</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
         </ruby>
       </a>
     </span>
     <ruby class="js-textEmphasis-ruby" aria-label="を打つ">
-      を<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      打<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      つ<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">を</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">打</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">つ</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
     </ruby>
   </em>。
 </p>
@@ -143,14 +143,14 @@ describe("basics", () => {
   <em>
     <em>
       <ruby class="js-textEmphasis-ruby" aria-label="圏点">
-        圏<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-        点<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+        <rb aria-hidden="true">圏</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+        <rb aria-hidden="true">点</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
       </ruby>
     </em>
     <ruby class="js-textEmphasis-ruby" aria-label="を打つ">
-      を<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      打<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      つ<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">を</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">打</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">つ</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
     </ruby>
   </em>。
 </p>
@@ -176,9 +176,9 @@ describe("basics", () => {
       圏点<rp>（</rp><rt>けんてん</rt><rp>）</rp>
     </ruby>
     <ruby class="js-textEmphasis-ruby" aria-label="を打つ">
-      を<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      打<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
-      つ<rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">を</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">打</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
+      <rb aria-hidden="true">つ</rb><rt class="js-textEmphasis-rt" aria-hidden="true">•</rt>
     </ruby>
   </em>。
 </p>

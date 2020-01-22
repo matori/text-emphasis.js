@@ -192,15 +192,25 @@ class TextEmphasis {
 
   createEmphasis(container, character) {
     const charNode = document.createTextNode(character)
-    container.appendChild(charNode)
-    if (!character.match(/\s/)) {
-      const rt = this.createRtElements()
+    if (character.match(/\s/)) {
+      container.appendChild(charNode)
+    } else {
+      const rb = this.createRbElement(charNode)
+      const rt = this.createRtElement()
+      container.appendChild(rb)
       container.appendChild(rt)
     }
     return container
   }
 
-  createRtElements() {
+  createRbElement(charNode) {
+    const rb = document.createElement("rb")
+    rb.appendChild(charNode)
+    rb.setAttribute("aria-hidden", "true")
+    return rb
+  }
+
+  createRtElement() {
     const rt = document.createElement("rt")
     const symbolNode = document.createTextNode(this.getEmphasisCharacter())
     rt.appendChild(symbolNode)

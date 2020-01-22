@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:browser && npm run build:node",
     "build:browser": "webpack --mode='production'",
-    "build:node": "babel 'src/index.js' --out-dir 'lib' --plugins '@babel/plugin-transform-modules-commonjs'",
+    "build:node": "babel 'src/index.js' --out-dir 'lib' --plugins 'babel-plugin-add-module-exports'",
     "start": "webpack-dev-server",
     "test": "jest"
   },
@@ -26,9 +26,9 @@
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
-    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "babel-loader": "^8.0.6",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "grapheme-splitter": "^1.0.4",
     "jest": "^24.9.0",
     "license-info-webpack-plugin": "^2.1.1",
